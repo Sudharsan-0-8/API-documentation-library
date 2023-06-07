@@ -1,0 +1,85 @@
+{
+    "route": "/",
+    "path": "/",
+    "meathod": "get",
+    "description": "",
+    "isEndPoint": false,
+    "isRootOfNestedRoute": false,
+    "next": {
+        "hi": {
+            "route": "hi",
+            "path": "/hi/",
+            "meathod": "get",
+            "description": "",
+            "isEndPoint": true,
+            "isRootOfNestedRoute": false,
+            "next": {}
+        },
+        "nested-route-1.1": {
+            "route": "nested-route-1.1",
+            "path": "/nested-route-1.1/",
+            "meathod": "get",
+            "description": "",
+            "isEndPoint": false,
+            "isRootOfNestedRoute": false,
+            "next": {
+                "nested-route-2.1": {
+                    "route": "nested-route-2.1",
+                    "path": "/nested-route-1.1/nested-route-2.1/",
+                    "meathod": "get",
+                    "description": "",
+                    "isEndPoint": true,
+                    "isRootOfNestedRoute": false,
+                    "next": {
+                        ":itemId": {
+                            "route": ":itemId",
+                            "path": "/nested-route-1.1/nested-route-2.1/:itemId/",
+                            "meathod": "get",
+                            "description": "",
+                            "isEndPoint": true,
+                            "isRootOfNestedRoute": false,
+                            "next": {}
+                        }
+                    }
+                },
+                ":userId": {
+                    "route": ":userId",
+                    "path": "/nested-route-1.1/:userId/",
+                    "meathod": "get",
+                    "description": "",
+                    "isEndPoint": true,
+                    "isRootOfNestedRoute": false,
+                    "next": {}
+                }
+            }
+        },
+        "nested-route-1.2": {
+            "route": "nested-route-1.2",
+            "path": "/nested-route-1.2/",
+            "meathod": "get",
+            "description": "",
+            "isEndPoint": true,
+            "isRootOfNestedRoute": false,
+            "next": {
+                ":itemId": {
+                    "route": ":itemId",
+                    "path": "/nested-route-1.2/:itemId/",
+                    "meathod": "get",
+                    "description": "",
+                    "isEndPoint": true,
+                    "isRootOfNestedRoute": false,
+                    "next": {}
+                }
+            }
+        },
+        "express-documentation": {
+            "route": "express-documentation",
+            "path": "/express-documentation/",
+            "meathod": "get",
+            "description": "",
+            "isEndPoint": true,
+            "isRootOfNestedRoute": false,
+            "next": {}
+        }
+    }
+}
